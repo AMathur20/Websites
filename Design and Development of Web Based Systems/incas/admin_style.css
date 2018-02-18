@@ -1,0 +1,80 @@
+.error {
+color: red;
+font-size: 1.5em;
+}
+
+#container {
+position:relative;
+top:0px;
+left:50%;
+height: 1118px;
+width: 600px;
+margin-left: -300px;
+background:url("../incas/bg.jpg");
+}
+
+#user_info {
+position:relative;
+left: 150px;
+top: 110px;
+height: 150px;
+width: 325px;
+overflow:auto;
+text-align: center;
+}
+
+#content_text_of_page {
+position:relative;
+left: 150px;
+margin-top: 120px;
+height: 260px;
+width: 325px;
+overflow:auto;
+}
+
+#menu {
+position:relative;
+left: 215px;
+margin-top: 120px;
+height:75px;
+width:200px;
+overflow:auto;
+text-align: center;
+}
+
+#footer {
+position:relative;
+left: 50%;
+margin-left: -300px;
+margin-top: 0px;
+height:75px;
+width: 600px;
+overflow: hidden;
+text-align: center;
+}
+
+
+/* xhtml tag styling */
+
+body, p {
+font-family:Tahoma, sans-serif;
+font-size:9pt;
+color:#2E2923;
+}
+
+a:link {
+color:#2E2923;
+}
+
+a:visited {
+color:#666666;
+}
+
+a:hover {
+color:#000000;
+text-decoration:none;
+}
+
+a:active {
+color:#666666;
+}

@@ -1,0 +1,416 @@
+/*  
+Theme Name: Photos @ AnksConsulting
+Theme URI: http://photo.anksconsulting.com
+Description: Theme for photos @ AnksConsulting
+Version: .1
+Author: Ankur Mathur
+Author URI: http://www.anksconsulting.com/
+
+
+*/
+
+
+
+/* Begin Typography & Colors */
+
+
+small {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 0.9em;
+	line-height: 1.5em;
+	}
+
+h1, h2, h3 {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	font-weight: bold;
+	}
+
+h1 {
+	font-size: 4em;
+	text-align: left;
+	}
+
+
+h2 {
+	font-size: 1.6em;
+	}
+
+
+h3 {
+	font-size: 1.3em;
+	}
+
+h1, h1 a, h1 a:hover, h1 a:visited, .description {
+	text-decoration: none;
+	color: #06c;
+	}
+
+h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited {
+	color: #333;
+	}
+
+h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, #wp-calendar caption, cite {
+	text-decoration: none;
+	}
+
+.entry p a:visited {
+	color: #b85b5a;
+	}
+
+.commentlist li, #commentform input, #commentform textarea {
+	font: 0.9em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+.commentlist li {
+	font-weight: bold;
+	}
+
+.commentlist cite, .commentlist cite a {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.1em;
+	}
+
+.commentlist p {
+	font-weight: normal;
+	line-height: 1.5em;
+	text-transform: none;
+	}
+
+#commentform p {
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+.commentmetadata {
+	font-weight: normal;
+	}
+
+#sidebar {
+	font: 1em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, .postmetadata, blockquote, strike {
+	color: #777;
+	}
+
+
+a, h2 a:hover, h3 a:hover {
+	color: #06c;
+	text-decoration: none;
+	}
+
+a:hover {
+	color: #147;
+	text-decoration: underline;
+	}
+
+/* End Typography & Colors */
+
+
+
+/* Begin Structure */
+
+
+body {
+	font-size: 62.5%; /* Resets 1em to 10px */
+	font-family: tahoma, verdana, sans-serif;
+	background-color: #fff;
+	color: #333;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+#page {
+   	background-color: #fff;
+	margin: 0px auto;
+	padding: 0;
+	width: 760px;
+
+	text-align: left;
+	}
+
+#header {
+	padding: 0;
+	margin: 0 auto;
+	height: 55px;
+	width: 100%;
+	background-color: #fff;
+
+	}
+
+#top-navi ul {
+  margin:0;
+  padding:0;
+}
+
+#top-navi li {
+  float:right;
+  margin-top:15px;
+  padding:0;
+  list-style-type:none;
+}
+
+#top-navi li a {
+  padding:0 18px;
+  font-size:1.5em;
+  color: #06c;
+  text-decoration:none;
+}
+
+#top-navi li a:hover {
+  color:#000;
+}
+#content {
+	font-size: 1.2em
+	}
+
+
+#footer
+{
+	clear: both;
+	background: #fafafa;
+	color: #808080;
+	font-size: 0.9em;
+	padding: 8px 0 8px 0;
+	border-top: 1px solid #d0d0d0;
+	border-bottom: 1px solid #d0d0d0;
+	text-align: center;
+}
+
+
+
+
+#thumbs {
+	float: left;
+	padding: 0 0 20px 45px;
+	margin: 0px 0 0;
+	width: 500px;
+	}
+
+.widecolumn {
+	padding: 10px 0 20px 0;
+	margin: auto;
+	width: 600px;
+	}
+
+.post {
+	margin: 0 0 40px;
+	text-align: left;
+	}
+
+.widecolumn .post {
+	margin: 0px;
+	}
+
+.narrowcolumn .postmetadata {
+	padding-top: 5px;
+	}
+
+.widecolumn .postmetadata {
+	margin: 30px 0;
+	}
+
+
+/* End Structure */
+
+
+
+/*	Begin Headers */
+h1 {
+	padding-top: 3px;
+	margin: 0px 0px -50px 25px;
+	}
+
+
+h2 {
+	margin: 15px 0 0;
+	}
+
+h2.pagetitle {
+	margin-top: 10px;
+	text-align: center;
+}
+
+
+
+h3 {
+	padding: 0;
+	margin: 30px 0 0;
+	}
+
+h3.comments {
+	padding: 0;
+	margin: 40px auto 20px ;
+	}
+/* End Headers */
+
+
+
+/* Begin Images */
+p img {
+	padding: 0;
+	max-width: 100%;
+	}
+
+/*	Using 'class="alignright"' on an image will (who would've
+	thought?!) align the image to the right. And using 'class="centered',
+	will of course center the image. This is much better than using
+	align="center", being much more futureproof (and valid) */
+
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+	}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+	}
+
+.alignright {
+	float: right;
+	}
+
+.alignleft {
+	float: left
+	}
+/* End Images */
+
+
+
+/* Begin Form Elements */
+#searchform {
+	margin: 10px auto;
+	padding: 5px 3px;
+	text-align: center;
+	}
+
+#sidebar #searchform #s {
+	width: 115px;
+	padding: 2px;
+	}
+
+#sidebar #searchsubmit {
+	padding: 1px;
+	}
+
+.entry form { /* This is mainly for password protected posts, makes them look better. */
+	text-align:center;
+	}
+
+select {
+	width: 130px;
+	}
+
+#commentform input {
+	width: 170px;
+	padding: 2px;
+	margin: 5px 5px 1px 0;
+	}
+
+#commentform textarea {
+	width: 100%;
+	padding: 2px;
+	}
+
+#commentform #submit {
+	margin: 0;
+	float: right;
+	}
+/* End Form Elements */
+
+
+
+/* Begin Comments*/
+.alt {
+	margin: 0;
+	padding: 10px;
+	}
+
+.commentlist {
+	padding: 0;
+	text-align: justify;
+	}
+
+.commentlist li {
+	margin: 15px 0 3px;
+	padding: 5px 10px 3px;
+	list-style: none;
+	}
+
+.commentlist p {
+	margin: 10px 5px 10px 0;
+	}
+
+#commentform p {
+	margin: 5px 0;
+	}
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+	}
+/* End Comments */
+
+
+
+
+/* Begin Various Tags & Classes */
+
+
+
+.center {
+	text-align: center;
+	}
+
+a img {
+	border: none;
+	}
+
+.navigation {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 60px;
+	}
+/* End Various Tags & Classes*/
+
+#thumbs {
+	margin: 10px;
+	padding:5px;
+	background-color: #FFF;
+}
+
+#thumbs ul
+ {
+	margin-left: 5px;
+	padding-left: 5px;
+	display: inline;
+ }
+
+#thumbs ul li {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	display: inline;
+}
+
+#thumbs img {
+      padding: 5px;
+      margin-bottom: 15px;
+}

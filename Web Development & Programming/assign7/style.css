@@ -1,0 +1,6 @@
+artist {display: block; font-family:Garamond,sans-serif;color: silver}
+title {display: block;font-size: 24pt; font-weight: bold;color: blue}
+country {display: none;}
+album  {display: inline; font-size: 12pt; padding-top: 6pt;color: green}
+length {display: none;}
+track {display: none;}

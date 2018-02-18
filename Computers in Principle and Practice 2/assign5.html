@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Assignment 5</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+<div id="content">
+<div id="text">
+<h1>Assignment 5</h1>
+<br>
+
+<h2>Please enter your information into my electronic address book.</h2>
+
+<!-- MODIFICATION 1
+The following line is the FORM tag. The ACTION attribute specifies the
+location of the cgi script. Since NYU has a special procedure for
+calling CGI scripts, the path to the cgi script is a little funny.
+You will need to change the ACTION attribute to call your own cgi script.
+So, change the - mn208 - to your username.
+-->
+
+
+<form method="get" action="http://i5.nyu.edu/cgi-bin/cgiwrap/~am1383/assign5.cgi">
+<table border="0">
+
+<!-- MODIFICATION 2
+You must modify all the input tags where the TYPE is "text".
+Modifications must be make in the following way: change the
+value given to the NAME attribute for each of the input tags.
+For example, I used "fname" and "lname" for the NAME attributes in the
+first row of the table. You will need to change all the values given
+to the NAME attribute into something different.
+
+For example, you may want to substitute "fname"
+with "FisrtName" , "address" with "StreetAddress" and so on. Make sure
+you do not use any spaces or garbage characters (!@#$%^&*(){}[]'"/\|<>,.=+`~;:).
+
+Remember the changes. Later on in the assignment, you will have to
+modify the CGI script (i.e., assign5.cgi) to reflect these changes.
+-->
+
+<!-- Row 1 -->
+<tr>
+<td align="right">Name (First / Last)</td>
+<td align="left">
+<input TYPE="text" NAME="FirstName" size="15">
+<input TYPE="text" NAME="LastName" size="15">
+</td>
+</tr>
+
+<!-- Row 2 -->
+<tr>
+<td align="right">Address</td>
+<td align="left">
+<input TYPE="text" NAME="StAddress" size="32">
+</td>
+</tr>
+
+<!-- Row 3 -->
+<tr>
+<td align="right">City, State, ZIP</td>
+<td align="left">
+<input TYPE="text" NAME="City" size="20">,
+<input TYPE="text" NAME="State" size="3">,
+<input TYPE="text" NAME="Zip" size="5">
+</td>
+</tr>
+
+<!-- Row 4 -->
+<tr>
+<td align="right">Phone</td>
+<td align="left">
+<input TYPE="text" NAME="Telephone" size="32">
+</td>
+</tr>
+
+<!-- Row 5 -->
+<tr>
+<td align="right">Email</td>
+<td align="left">
+<input TYPE="text" NAME="EmailAddress" size="32">
+</td>
+</tr>
+
+
+<!-- Row 6 -->
+<tr>
+<td></td>
+<td>
+
+<!-- These are command buttons, you do not need to
+modify their values. -->
+
+<input NAME="Submit" TYPE="submit" VALUE="Submit">
+<input NAME="Cancel" TYPE="reset" VALUE="Reset">
+</td>
+</tr>
+
+
+</table>
+</form>
+<br>
+</div>
+</div>
+
+
+</body>
+
+</html>

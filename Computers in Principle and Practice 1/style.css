@@ -1,0 +1,35 @@
+.ank329 {
+	font-family: Garamond;
+	color: #000000;
+	background-attachment: fixed;
+	background-image: url(pics/back.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+A:link	{	
+	text-decoration:	underline;
+
+	color:	blue	;
+
+	}	
+		
+A:visited	{	
+	text-decoration:	underline;
+
+	color:	purple;
+	
+	}	
+		
+A:active	{	
+	text-decoration:	underline;
+
+	color:	green;
+
+	}	
+		
+A:hover	{	
+	text-decoration:	underline;
+	color:	red;
+
+	}	
+		

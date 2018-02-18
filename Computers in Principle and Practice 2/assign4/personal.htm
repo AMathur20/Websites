@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Personal Information</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<script language="JavaScript" type="text/javascript">
+<!-- HIDE IT
+
+// Set up the expire date for cookies that will be set on this page
+expiredate= new Date;
+expiredate.setMonth(expiredate.getMonth() + 6);
+
+// Set the default style to 1
+var style_change = 1;
+
+
+//Test if a cookie exists, if it does, get the value of the  cookies using the getCookie function
+//Even if one cookie exists for this domain, the if statement is true and will be evaluated. 
+//  Need to take this into account later on, because if there is no value for the cookie, the
+//  getCookie function returns a null value
+if (document.cookie != "") {
+//alert("Cookie exists");
+   fname=getCookie("FirstName");
+   lname=getCookie("lname");
+   address1=getCookie("address1");
+   city=getCookie("city");
+   state1=getCookie("state1");
+   zipCode=getCookie("zipCode");
+   phone=getCookie("phone");  
+   style_change=getCookie("Style_sheet");
+} /* end if cookie */
+//If we have a null value for the style sheet, set it to 1
+if(style_change==null){
+style_change=1;
+}
+// write out the link to correct style sheet
+document.write("<link href='style"+style_change+".css' rel='stylesheet' type='text/css'>");
+
+function setCookie(name, value, expires, path, domain, secure) {
+// This function sets a cookie based on the info passed to it
+  var curCookie = name + "=" + escape(value) + "; expires=" +expiredate.toGMTString() +
+      ((path) ? "; path=" + path : "") +
+      ((domain) ? "; domain=" + domain : "") +
+      ((secure) ? "; secure" : "");
+  document.cookie = curCookie;
+} // end function
+
+function getCookie(name) {
+// this function reads the info saved in a cookie, based on the name passed to it
+  var dc = document.cookie;
+  var prefix = name + "=";
+  var begin = dc.indexOf("; " + prefix);
+  if (begin == -1) {
+    begin = dc.indexOf(prefix);
+    if (begin != 0) return null;
+  } else
+    begin += 2;
+  var end = document.cookie.indexOf(";", begin);
+  if (end == -1)
+    end = dc.length;
+  return unescape(dc.substring(begin + prefix.length, end));
+} // end function
+
+
+
+
+// END HIDING -->	
+</script>
+</head>
+
+<body>
+<div id="content">
+<div id="text">
+<h1>Personal Information</h1>
+<p>This will automatically save for you</p>
+<!-- So with this part, I know it is not neat, but it gets the job done. 
+I didn't want to have a whole lot of document.writes, so I enter javascript, and end it very often
+-->
+<form name="myform" action="">
+  <p>First Name: 
+<script language="JavaScript" type="text/javascript">
+<!-- HIDE IT
+var Firstname ="FirstName";
+document.write("<input type='text' name='fname1'  onBlur='fname=this.value; setCookie(Firstname, fname)' ");
+  if (fname!="") {
+     document.write(" value='"+fname+"'");
+}
+document.write("> ");
+// END HIDING -->	
+</script>
+
+</p>
+  <p>Last Name:
+<script language="JavaScript" type="text/javascript">
+<!-- HIDE IT
+var Lastname ="lname";
+document.write("<input type='text' name='lname1'  onBlur='lname=this.value; setCookie(Lastname, lname)' ");
+  if (lname!="") {
+     document.write(" value='"+lname+"'");
+}
+document.write("> ");
+// END HIDING -->	
+</script>
+
+  </p>
+  <p>Address:
+<script language="JavaScript" type="text/javascript">
+<!-- HIDE IT
+var Address ="address1";
+document.write("<input type='text' name='address1'  onBlur='add1=this.value; setCookie(Address, add1)' ");
+  if (address1!="") {
+     document.write(" value='"+address1+"'");
+}
+document.write("> ");
+// END HIDING -->	
+</script>
+
+  </p>
+  <p>City:
+  <script language="JavaScript" type="text/javascript">
+<!-- HIDE IT
+var City ="city";
+document.write("<input type='text' name='city'  onBlur='city1=this.value; setCookie(City, city1)' ");
+  if (city!="") {
+     document.write(" value='"+city+"'");
+}
+document.write("> ");
+// END HIDING -->	
+</script>
+
+  </p>
+  <p>State:
+  <script language="JavaScript" type="text/javascript">
+<!-- HIDE IT
+var ResState ="state1";
+document.write("<input type='text' name='State'  onBlur='state1=this.value; setCookie(ResState, state1)' ");
+  if (state1!="") {
+     document.write(" value='"+state1+"'");
+}
+document.write("> ");
+// END HIDING -->	
+</script>
+
+  </p>
+  <p>Zip Code:
+  <script language="JavaScript" type="text/javascript">
+<!-- HIDE IT
+var Zip ="zipCode";
+document.write("<input type='text' name='zip1'  onBlur='zip_code=this.value; setCookie(Zip, zip_code)' ");
+  if (zipCode!="") {
+     document.write(" value='"+zipCode+"'");
+}
+document.write("> ");
+// END HIDING -->	
+</script>
+
+  </p>
+  <p>Phone number:
+  <script language="JavaScript" type="text/javascript">
+<!-- HIDE IT
+var Phone ="phone";
+document.write("<input type='text' name='phone1'  onBlur='phone_number=this.value; setCookie(Phone, phone_number)' ");
+  if (phone!="") {
+     document.write(" value='"+phone+"'");
+}
+document.write("> ");
+// END HIDING -->	
+</script> 
+
+</p>
+      
+  <p>
+    
+  </p>
+</form>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+body {
+	font-family: Georgia, sans-serif;
+	color:#000000;
+	background-color:#99ffff;
+}
+
+a
+    {
+    color: #70FF33;
+    }
+a:hover
+    {
+    color: black;
+    }
+
+ul
+    {
+    list-style-type: none;
+}
+#content{
+	margin: 0 auto;
+	width: 800px;
+}
+
+h1 {
+	text-align:center;
+}
+
+#center {
+text-align:center;
+}
+
+#text  {
+	padding-left: 10px;
+}
+
+
+
+.text {color:#000000;}

@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>Monthly Calendar</title>
+	
+	<style type="text/css">
+	body {
+		font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+		background-color: #999999; 
+		text-align: center;
+	}
+
+	.dates {
+		background: #ecf4ff url("datemarker.gif") no-repeat top right;
+	}
+	
+	.today {
+		background: #fefdeb url("datemarker.gif") no-repeat top right;;
+	}
+	
+	table {
+		background-color: white;
+	}
+	
+	.holiday {
+		margin:0 auto;
+		width:940px;
+		background: white;
+		text-align: left;
+	}
+	
+	
+	</style>
+	
+	
+	<script language="JavaScript" type="text/javascript">
+	<!-- Hide script from old browsers
+
+	dayName = new Array ("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+	monName = new Array ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+	
+	// The dayName arrary is an array that holds the days of the week
+	// The monName arrary is an array that holds the names of the months
+	
+	now = new Date 
+	// Create a variable of the type date. This is the current system time. The current date is formated differently in the calendar.
+	
+
+	// End hiding script from old browsers -->
+	</script>	
+</head>
+<body>
+
+<script language="JavaScript" type="text/javascript">
+	<!-- Hide script from old browsers
+
+	useMonth = prompt("Please enter a Month (1 to 12)"); // This prompts the user to enter in a month
+	
+	while (useMonth<1 || useMonth>12) {
+		 // If the input from the user is not valid, either less than 1 or greater than 12, 
+		 	// keep asking them till they give a vaild response
+		useMonth = prompt("Try again!\nThe number MUST be between 1 and 12");
+	}
+	
+	useYear = prompt("Please enter in a year (4 digits)\n(1901 and forward please)"); // Prompts the user to enter in a year... will only work from 1901 forward
+	
+	m = new Date // create a variable of the type Date
+	m.setYear(useYear) // Set the year of this date variable to the year the user entered
+	
+	// We need to subtract 1 from the month because the Date variable type stores January as 0, whereas the user would have entered in 1 for January
+	useMonth = useMonth - 1; 
+	m.setMonth(useMonth) // Set the month of this date variable to the month the user entered
+	
+	//alert(m.getFullYear()); // just a test to make sure it was set correctly
+	
+	m.setDate(1); // I'm setting the date to the first of the month so I can figure out what day of the week the month starts
+	
+	firstDay = m.getDay(); // The getDay() function figures out what the day of the week the first of the month was
+	
+		
+	//alert(m.getMonth()) //another test...
+	
+	
+	
+	//This switch section figures out how many days we have in the month the user entered
+	switch(m.getMonth()){
+	case 1: //1 is really February... remember we subtracted 1 from the user input? So with February, we need to correct for leap years
+		if((m.getFullYear()%4==0&&m.getFullYear()%100!=0)||m.getFullYear()%400==0) // This should be the correct test...
+		{
+			monleng = 29; //leap year
+			break
+		}
+		else
+		{
+			monleng = 28; //not a leap year
+			break
+		}
+	case 3:
+		monleng = 30; //April has 30 days
+		break
+	case 5:
+		monleng =  30; //So does June...
+		break
+	case 8:
+		monleng =  30; //And September
+		break
+	case 10:
+		monleng =  30 // And so does November
+		break
+	default:
+		monleng =  31; // Everything else has 31 days
+		break
+	}
+	
+	
+	// we have now figured out all the hard stuff, we now print out the calendar.
+	
+
+	// End hiding script from old browsers -->
+</script>
+
+<!-- I like having valid HTML syntax, so I have placed the JavaScript that writes the calendar in a seperate file.
+		If I have it in the same file, I do not have valid HTML syntax. -->
+<script language="JavaScript" type="text/javascript" src="ankur_mathur_assignment3.js"></script>
+
+
+
+</body>
+</html>

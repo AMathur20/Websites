@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Assignment 3</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+
+  <script language="JavaScript" type="text/javascript">
+<!--HIDE
+//set the counter to 0
+counter = 0;
+
+function cookieCheck() {
+	// Check to see if a cookie exists
+	if (document.cookie == "") {
+		// If there is no cookie get the user's name
+		name1=prompt("What is your name?","")
+		// and now actually set the cookie
+		
+		expireDate = new Date;
+		expireDate.setMonth(expireDate.getMonth()+12);
+		blackjackCounter = 0;
+		document.cookie = "userName="+name1+"=counter="+blackjackCounter+";expires="+expireDate.toGMTString();
+	}
+	else {
+		//otherwise, using an alert, welcome the user with their name, and number of blackjack they have gotten
+		//read the cookie, get the name and value of the counter
+		name = document.cookie.split("=")[1]
+		blackjackCounter = document.cookie.split("=")[3]
+		
+		//welcome the user
+		alert("Welcome "+name+". You have had "+blackjackCounter+" BlackJacks before.");
+		
+	}	
+}
+
+
+function rollIt() {
+	// This fuction does most of the work of the assignment
+	// It will first generate 2 random numbers between 2 and 14, to determine which cards to draw.
+	// Next, it increments the counter that tracks the number of cards dealt.
+	// Next, it test the two cards to see if they are face cards, if they are,
+		// the values assigned to them are changed to 10.
+	// Next, the cards it tests to see if we have drawn two aces, if they are both aces, then
+		// the value of one of them is changed to 1, while the other remains at 11.
+	// Next, ir compmutes the total value of the two cards.
+	// Finally, it prints out all of the numbers into the correct fields, changes the images,
+		// and test for blackjack. If we have Blackjack, the program waits for two seconds 
+		// and calls the function backjack.
+		
+
+    //get 2 random numbers between 2 and 14
+	var c1 = Math.ceil(Math.random() * 13)+1
+    var c2 = Math.ceil(Math.random() * 13)+1
+	
+	//Increment the counter
+	counter++;
+
+	//Test to see if the card is face card, if it is, then change the value to 10
+	if (c1==12 || c1==13 || c1==14) {
+	  	var c1_new = 10;
+	}
+	else {
+		var c1_new = c1;
+	}
+	//Do the same for card 2
+	if (c2==12 || c2==13 || c2==14) {
+	  	var c2_new = 10;
+	}
+	else {
+		var c2_new = c2;
+	}
+	
+	//test to see if we have 2 aces, if we do, Ace 2 will be worth 1
+	if (c1==11 && c2==11) {
+		var c2_new = 1;
+	}
+
+	//Get the total for the two cards
+	var tot = c1_new + c2_new;
+	
+	// print the numbers out into the form
+    with (document.forms[0]) {
+		//Print the value of cards 1 and 2
+        card1.value = c1_new
+        card2.value = c2_new
+		// Print the total
+        total.value = tot
+		//Print the updated counter value
+		countre.value = counter
+       }
+ 	// Change the images
+    document.images[0].src="assign3/" + c1 + "hearts.gif"
+    document.images[1].src="assign3/" + c2 + "hearts.gif"
+	
+	//Test to see if we have Blackjack!
+	if (c1==11 && (c2==10 || c2==12 || c2==13 || c2==14)) {
+		setTimeout(backjack(),2000);
+	}	
+	if (c2==11 && (c1==10 || c1==12 || c1==13 || c1==14)) {
+		setTimeout(backjack(),2000);
+	}	
+ }
+
+function backjack() {
+	// This fuction does a couple of things, first it tracks the number of blackjacks
+		// dealt with the current cookie, and updates the cookie as needed.
+	// It also opens up a new window that shows the BlackJack animated gif
+	
+	// Get the current values of the cookie, incase they got lost somewhere...
+	name = document.cookie.split("=")[1]
+	blackjackCounter = document.cookie.split("=")[3]	
+	
+	//increment the BlackJack counter
+	blackjackCounter++
+	
+	//delete odd cookie
+	expireDateDelete = new Date
+	expireDateDelete.setDate(expireDateDelete.getDate()-1)
+	document.cookie = "userName=;expires="+expireDateDelete.toGMTString();
+	
+	//write a new cookie
+	expireDate1 = new Date;
+	expireDate1.setMonth(expireDate1.getMonth()+12)
+	document.cookie = "userName="+name+"=counter="+blackjackCounter+";expires="+expireDate1.toGMTString();
+	
+	
+	// open a new window with the blackjack animated gif
+	bjack = window.open("blackjack.htm", "", 'width=350,height=600')
+}
+
+
+//STOP HIDING-->
+</script>
+
+</head>
+
+<body onLoad="cookieCheck()">
+<div id="content">
+<div id="text">
+<h1>Assignment 3</h1>
+<p>&nbsp;</p>
+<p><br>
+  </p>
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr align="center">
+    <td>Card 1 </td>
+    <td>Card 2 </td>
+  </tr>
+  <tr align="center">
+    <td><img src="assign3/cardback.gif" width="95" height="135" alt="card 1" border="0"></td>
+    <td><img src="assign3/cardback.gif" width="95" height="135" alt="card 2" border="0"></td>
+  </tr>
+</table>
+<br>
+<form action="">
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="50%" scope="col">Points for Card 1:</td>
+    <td width="50%" scope="col">
+      <div align="left">
+        <INPUT TYPE="text" NAME="card1" SIZE="1" value="0">
+      </div></td>
+  </tr>
+  <tr>
+    <td width="50%">Points for Card 2:</td>
+    <td width="50%">
+      <div align="left">
+        <INPUT TYPE="text" NAME="card2" SIZE="1" value="0">
+      </div></td>
+  </tr>
+  <tr>
+    <td width="50%">Total Points for hand:</td>
+    <td width="50%">
+      <div align="left">
+        <INPUT TYPE="text" NAME="total" SIZE="2" value="0">
+      </div></td>
+  </tr>
+  <tr>
+    <td width="50%">Number of hands so far:</td>
+    <td width="50%">
+      <div align="left">
+        <INPUT TYPE="text" NAME="countre" SIZE="2" value="0">
+      </div></td>
+  </tr>
+  <tr>
+    <td colspan="2">      <div align="center">
+      <input name="Button" type="button" onClick="rollIt()"  value="Deal">      
+    </div>      <div align="left"></div></td>
+    </tr>
+</table>
+<p>
+<p>    <br>
+<br>
+  <br>
+</form>
+
+<br>
+</div>
+</div>
+
+</body>
+</html>

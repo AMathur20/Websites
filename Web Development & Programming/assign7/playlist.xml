@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="catalog.xsl"?>
+<!DOCTYPE catalog SYSTEM "catalog.dtd">
+<catalog>
+	<cd>
+		<title>Ants Marching</title>
+		<artist>Dave Matthews Band</artist>
+		<country>USA</country>
+		<album>Under The Table And Dreaming</album>
+		<length>4:31</length>
+		<track>1</track>
+	</cd>
+	
+	<cd>
+		<title>Dude</title>
+		<artist>Beenie Man</artist>
+		<country>USA</country>
+		<album>Back to Basics</album>
+		<length>4:15</length>
+		<track>2</track>
+	</cd>
+	
+	<cd>
+		<title>Otherstracke</title>
+		<artist>Red Hot Chili Peppers</artist>
+		<country>USA</country>
+		<album>Greatest Hits</album>
+		<length>4:15</length>
+		<track>3</track>
+	</cd>
+	
+	<cd>
+		<title>In a Little While</title>
+		<artist>U2</artist>
+		<country>USA</country>
+		<album> All That You Can't Leave Behind</album>
+		<length>3:39</length>
+		<track>4</track>
+	</cd>
+	
+	<cd>
+		<title>Clocks</title>
+		<artist>Coldplay</artist>
+		<country>USA</country>
+		<album>Clocks (EP)</album>
+		<length>5:09</length>
+		<track>5</track>
+	</cd>
+	
+	<cd>
+		<title>Satellite</title>
+		<artist>Dave Matthews Band</artist>
+		<country>USA</country>
+		<album>Remember Two Things</album>
+		<length>4:50</length>
+		<track>6</track>
+	</cd>
+	
+	<cd>
+		<title>Crash Into Me</title>
+		<artist>Dave Matthews Band</artist>
+		<country>USA</country>
+		<album>Crash</album>
+		<length>5:16</length>
+		<track>7</track>
+	</cd>
+	
+	<cd>
+		<title>In My Place</title>
+		<artist>Coldplay</artist>
+		<country>USA</country>
+		<album>A Rush Of Blood To The Head</album>
+		<length>3:50</length>
+		<track>8</track>
+	</cd>
+	
+	<cd>
+		<title>With or Without You</title>
+		<artist>U2</artist>
+		<country>USA</country>
+		<album>The Joshua Tree</album>
+		<length>4:56</length>
+		<track>9</track>
+	</cd>
+	
+	
+	<cd>
+		<title>Raven</title>
+		<artist>Dave Matthews Band</artist>
+		<country>USA</country>
+		<album>Busted Stuff</album>
+		<length>5:37</length>
+		<track>10</track>
+	</cd>
+</catalog>

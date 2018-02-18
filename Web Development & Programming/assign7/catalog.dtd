@@ -1,0 +1,8 @@
+<!ELEMENT catalog (cd+)>
+<!ELEMENT cd (title*,artist*,country*,album*,length*,track*)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT artist (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT album (#PCDATA)>
+<!ELEMENT length (#PCDATA)>
+<!ELEMENT track (#PCDATA)>

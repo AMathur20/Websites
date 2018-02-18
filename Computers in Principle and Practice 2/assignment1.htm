@@ -1,0 +1,253 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Assignment 1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="content">
+<div id="text">
+<h1>Assignment 1</h1>
+<br>
+<div class="syntax"><div class="java">
+<ol><li><div class="de1"><span class="coMULTI">/*Ankur Mathur</span></div></li>
+<li class="li2"><div class="de2"><span class="coMULTI"> *V22.0005</span></div></li>
+<li><div class="de1"><span class="coMULTI"> *Assignment 1</span></div></li>
+<li class="li2"><div class="de2"><span class="coMULTI"> *This program picks 100 random cards and prints out statistics about it */</span></div></li>
+<li><div class="de1">&nbsp;</div></li>
+<li class="li2"><div class="de2">&nbsp;<span class="kw2">public</span> <span class="kw2">class</span> Assignment1 <span class="br0">{</span></div></li>
+
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</div></li>
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</div></li>
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw2">public</span> <span class="kw4">static</span> <span class="kw4">void</span> main <span class="br0">(</span><a href="http://www.google.com/search?q=allinurl%3AString+java.sun.com&amp;bntl=1"><span class="kw3">String</span></a><span class="br0">[</span><span class="br0">]</span> args<span class="br0">)</span></div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">{</span></div></li>
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="co1">//Print out my name, UID number, and a welcome message</span></div></li>
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">(</span><span class="st0">"Ankur Mathur"</span><span class="br0">)</span>;</div></li>
+
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">(</span><span class="st0">"UID: N17650220"</span><span class="br0">)</span>;</div></li>
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">(</span><span class="st0">"Welcome to Ankur's Card Picker!"</span><span class="br0">)</span>;</div></li>
+
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">(</span><span class="st0">"So, lets get started.... Here are your 100 cards:"</span><span class="br0">)</span>;</div></li>
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">(</span><span class="br0">)</span>;</div></li>
+
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</div></li>
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</div></li>
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="co1">//Create an array to keep track of the ranks of each card selected</span></div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw4">int</span> ranks<span class="br0">[</span><span class="br0">]</span> = <span class="kw2">new</span> <span class="kw4">int</span><span class="br0">[</span><span class="nu0">14</span><span class="br0">]</span>;</div></li>
+
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</div></li>
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="co1">//Create an array to keep tracks of the suits of each card selected</span></div></li>
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw4">int</span> suit<span class="br0">[</span><span class="br0">]</span> = <span class="kw2">new</span> <span class="kw4">int</span><span class="br0">[</span><span class="nu0">5</span><span class="br0">]</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</div></li>
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</div></li>
+<li class="li2"><div class="de2">&nbsp;</div></li>
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="co1">//A For Loop. This picks the cards, and correctly increments the arrays to keep track of it</span></div></li>
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> i=<span class="nu0">1</span>; i&lt;=<span class="nu0">100</span>; i++<span class="br0">)</span></div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">{</span></div></li>
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="co1">//Get a random # between 0 and 12 for the rank of the card</span></div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw4">int</span> card_rank = <span class="br0">(</span><span class="kw4">int</span><span class="br0">)</span> <span class="br0">(</span><a href="http://www.google.com/search?q=allinurl%3AMath+java.sun.com&amp;bntl=1"><span class="kw3">Math</span></a>.<span class="me1">random</span><span class="br0">(</span><span class="br0">)</span> * <span class="nu0">14</span><span class="br0">)</span>;</div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">//System.out.println(card_rank); &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</span></div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div></li>
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">//Get a random # between 0 and 3 for the suit of the card</span></div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw4">int</span> card_suit = <span class="br0">(</span><span class="kw4">int</span><span class="br0">)</span> <span class="br0">(</span><a href="http://www.google.com/search?q=allinurl%3AMath+java.sun.com&amp;bntl=1"><span class="kw3">Math</span></a>.<span class="me1">random</span><span class="br0">(</span><span class="br0">)</span> * <span class="nu0">4</span><span class="br0">)</span>;</div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">//System.out.println(card_suit);</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="coMULTI">/*Increment rank array based on the card that was chosen</span></div></li>
+<li class="li2"><div class="de2"><span class="coMULTI">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; to keep track of how many times that ranked card was picked*/</span></div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ranks<span class="br0">[</span>card_rank<span class="br0">]</span>++;</div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="coMULTI">/*Increment the suit array based on the number chosen </span></div></li>
+<li class="li2"><div class="de2"><span class="coMULTI">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;to keep track of how many times it was chosen */</span></div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; suit<span class="br0">[</span>card_suit<span class="br0">]</span>++;</div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">//Start Printing out card info</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"Card #&nbsp; &nbsp; "</span> + i + <span class="st0">" =&nbsp; "</span><span class="br0">)</span>;</div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">//Use a switch statement to figure out what rank card was picked and print it out</span></div></li>
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">switch</span> <span class="br0">(</span>card_rank<span class="br0">)</span> <span class="br0">{</span></div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> <span class="nu0">0</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"Ace of "</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> <span class="nu0">1</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"1 of "</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> <span class="nu0">2</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"2 of "</span><span class="br0">)</span>; <span class="kw2">break</span>; </div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> <span class="nu0">3</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"3 of "</span><span class="br0">)</span>; <span class="kw2">break</span>; </div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> <span class="nu0">4</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"4 of "</span><span class="br0">)</span>; <span class="kw2">break</span>; </div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> <span class="nu0">5</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"5 of "</span><span class="br0">)</span>; <span class="kw2">break</span>; </div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> <span class="nu0">6</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"6 of "</span><span class="br0">)</span>; <span class="kw2">break</span>; </div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> <span class="nu0">7</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"7 of "</span><span class="br0">)</span>; <span class="kw2">break</span>; </div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> <span class="nu0">8</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"8 of "</span><span class="br0">)</span>; <span class="kw2">break</span>; </div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> <span class="nu0">9</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"9 of "</span><span class="br0">)</span>; <span class="kw2">break</span>; </div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> <span class="nu0">10</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"10 of "</span><span class="br0">)</span>; <span class="kw2">break</span>; </div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> <span class="nu0">11</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"Jack of "</span><span class="br0">)</span>; <span class="kw2">break</span>; </div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> <span class="nu0">12</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"Queen of "</span><span class="br0">)</span>; <span class="kw2">break</span>; </div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> <span class="nu0">13</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"King of "</span><span class="br0">)</span>; <span class="kw2">break</span>; </div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; default: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"DANG IT! I messed up somewhere if you see this"</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div></li>
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="co1">//Use a switch statement to figure out what suit the card is</span></div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">switch</span> <span class="br0">(</span>card_suit<span class="br0">)</span> <span class="br0">{</span></div></li>
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> <span class="nu0">0</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"Clubs."</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> <span class="nu0">1</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"Spades."</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> <span class="nu0">2</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"Hearts."</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> <span class="nu0">3</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"Diamonds."</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; default: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"DANG IT! I messed up somewhere if you see this"</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span></div></li>
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">(</span><span class="br0">)</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">}</span></div></li>
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</div></li>
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="co1">//add a blank line</span></div></li>
+
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">(</span><span class="br0">)</span>;</div></li>
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</div></li>
+
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</div></li>
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="co1">//Use a for loop to go through each arry to figure out how many cards of each rank were dealt</span></div></li>
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> k=<span class="nu0">0</span>; k&lt;=<span class="nu0">13</span>; k++<span class="br0">)</span><span class="br0">{</span></div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"You were dealt a"</span><span class="br0">)</span>;</div></li>
+
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</div></li>
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">switch</span> <span class="br0">(</span>k<span class="br0">)</span> <span class="br0">{</span></div></li>
+
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">case</span> <span class="nu0">0</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"n Ace "</span> + ranks<span class="br0">[</span>k<span class="br0">]</span> + <span class="st0">" times."</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">case</span> <span class="nu0">1</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">" 1 card "</span> + ranks<span class="br0">[</span>k<span class="br0">]</span> + <span class="st0">" times."</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">case</span> <span class="nu0">2</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">" 2 card "</span> + ranks<span class="br0">[</span>k<span class="br0">]</span> + <span class="st0">" times."</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">case</span> <span class="nu0">3</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">" 3 card&nbsp; "</span> + ranks<span class="br0">[</span>k<span class="br0">]</span> + <span class="st0">" times."</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">case</span> <span class="nu0">4</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">" 4 card "</span> + ranks<span class="br0">[</span>k<span class="br0">]</span> + <span class="st0">" times."</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">case</span> <span class="nu0">5</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">" 5 card "</span> + ranks<span class="br0">[</span>k<span class="br0">]</span> + <span class="st0">" times."</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">case</span> <span class="nu0">6</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">" 6 card "</span> + ranks<span class="br0">[</span>k<span class="br0">]</span> + <span class="st0">" times."</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">case</span> <span class="nu0">7</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">" 7 card "</span> + ranks<span class="br0">[</span>k<span class="br0">]</span> + <span class="st0">" times."</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">case</span> <span class="nu0">8</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">" 8 card "</span> + ranks<span class="br0">[</span>k<span class="br0">]</span> + <span class="st0">" times."</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">case</span> <span class="nu0">9</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">" 9 card "</span> + ranks<span class="br0">[</span>k<span class="br0">]</span> + <span class="st0">" times."</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">case</span> <span class="nu0">10</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">" 10 card "</span> + ranks<span class="br0">[</span>k<span class="br0">]</span> + <span class="st0">" times."</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">case</span> <span class="nu0">11</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">" Jack "</span> + ranks<span class="br0">[</span>k<span class="br0">]</span> + <span class="st0">" times."</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">case</span> <span class="nu0">12</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">" Queen "</span> + ranks<span class="br0">[</span>k<span class="br0">]</span> + <span class="st0">" times."</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">case</span> <span class="nu0">13</span>: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">" King&nbsp; "</span> + ranks<span class="br0">[</span>k<span class="br0">]</span> + <span class="st0">" times."</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;default: <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"MESSED UP HERE, you should not see this."</span><span class="br0">)</span>; <span class="kw2">break</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">}</span></div></li>
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">(</span><span class="br0">)</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">}</span></div></li>
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</div></li>
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</div></li>
+
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="co1">//go through the array to figure out the largest number to see which card was dealt most often</span></div></li>
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw4">int</span> max = <span class="nu0">0</span>;</div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> r=<span class="nu0">0</span>; r&lt;=<span class="nu0">13</span>; r++<span class="br0">)</span></div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span></div></li>
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">(</span>ranks<span class="br0">[</span>r<span class="br0">]</span>&gt;max<span class="br0">)</span></div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max = ranks<span class="br0">[</span>r<span class="br0">]</span>;</div></li>
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span></div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</div></li>
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="co1">//print out the max</span></div></li>
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">(</span><span class="br0">)</span>;</div></li>
+
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"The highest count was "</span> + max + <span class="st0">", and was found with the following card(s): "</span><span class="br0">)</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</div></li>
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="co1">//go through array to figure out which card was dealt most often</span></div></li>
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> f=<span class="nu0">0</span>; f&lt;=<span class="nu0">13</span>; f++<span class="br0">)</span></div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">(</span>ranks<span class="br0">[</span>f<span class="br0">]</span>==max<span class="br0">)</span></div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">{</span></div></li>
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">(</span>f==<span class="nu0">0</span><span class="br0">)</span></div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"Ace "</span><span class="br0">)</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">(</span>f&gt;<span class="nu0">0</span> &amp;&amp; f&lt;<span class="nu0">10</span><span class="br0">)</span></div></li>
+
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span>f +<span class="st0">" "</span><span class="br0">)</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">(</span>f==<span class="nu0">11</span><span class="br0">)</span></div></li>
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"Jack "</span><span class="br0">)</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">(</span>f==<span class="nu0">12</span><span class="br0">)</span></div></li>
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"Queen "</span><span class="br0">)</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">(</span>f==<span class="nu0">13</span><span class="br0">)</span></div></li>
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">(</span><span class="st0">"King "</span><span class="br0">)</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span></div></li>
+<li><div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">}</span></div></li>
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">(</span><span class="br0">)</span>;</div></li>
+
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</div></li>
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="co1">//figure out how many red cards were dealt</span></div></li>
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw4">int</span> red = <span class="br0">(</span>suit<span class="br0">[</span><span class="nu0">2</span><span class="br0">]</span>+suit<span class="br0">[</span><span class="nu0">3</span><span class="br0">]</span><span class="br0">)</span>; </div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="kw4">int</span> black = <span class="br0">(</span>suit<span class="br0">[</span><span class="nu0">0</span><span class="br0">]</span>+suit<span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="br0">)</span>;</div></li>
+
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?q=allinurl%3ASystem+java.sun.com&amp;bntl=1"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">(</span> red + <span class="st0">" red cards were dealt, and "</span> + black + <span class="st0">" black cards were dealt."</span> <span class="br0">)</span>;</div></li>
+
+<li class="li2"><div class="de2">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</div></li>
+<li><div class="de1">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">}</span></div></li>
+<li class="li2"><div class="de2">&nbsp;<span class="br0">}</span> </div></li></ol>
+
+  
+</div></div></div>
+<br><br><br>
+</div>
+</body>
+</html>

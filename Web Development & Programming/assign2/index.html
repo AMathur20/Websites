@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Ankur Mathur ~ Web Development &amp; Programming</title>
+<link href="style.css" type="text/css" rel="Stylesheet" media="screen, projection" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<script language="javascript" type="text/javascript">
+<!-- Hide script from old browsers
+
+adBannerIamges = new Array("images/banner/1.gif","images/banner/2.gif","images/banner/3.gif","images/banner/4.gif","images/banner/5.gif")
+thisAdImage = 0
+totalImages = adBannerIamges.length
+
+function rotate() {
+	if (document.images) {
+		thisAdImage++
+		if (thisAdImage == totalImages) {
+			thisAdImage = 0
+		}
+		document.banner.src=adBannerIamges[thisAdImage]
+	  	setTimeout("rotate()", 3 * 1000)
+  	}
+}
+
+slidePics = new Array("images/slide/1.jpg","images/slide/2.jpg","images/slide/3.jpg","images/slide/4.jpg","images/slide/5.jpg")
+CurrentPic = 0
+totalImages2 = slidePics.length - 1
+
+function processPrevious() {
+	if (document.images && CurrentPic  > 0) {
+		CurrentPic --
+		document.slideShow.src=slidePics[CurrentPic ]
+	}
+}
+
+function processNext() {
+	if (document.images && CurrentPic  < totalImages2) {
+		CurrentPic++
+		document.slideShow.src=slidePics[CurrentPic ]
+	}
+}
+
+
+
+if (document.images) {
+	homeNormal = new Image
+	homeOver = new Image
+	aboutNormal = new Image
+	aboutOver = new Image
+	contactNormal = new Image
+	contactOver = new Image
+	orderNormal = new Image
+	orderOver = new Image
+	productsNormal = new Image
+	productsOver = new Image
+	eventsNormal = new Image
+	eventsOver = new Image
+	
+
+	homeNormal.src = "images/buttons/homeNormal.gif"
+	homeOver.src = "images/buttons/homeOver.gif"
+	aboutNormal.src = "images/buttons/aboutNormal.gif"
+	aboutOver.src = "images/buttons/aboutOver.gif"
+	contactNormal.src = "images/buttons/contactNormal.gif"
+	contactOver.src = "images/buttons/contactOver.gif"
+	orderNormal.src = "images/buttons/orderNormal.gif"
+	orderOver.src = "images/buttons/orderOver.gif"
+	productsNormal.src = "images/buttons/productsNormal.gif"
+	productsOver.src = "images/buttons/productsOver.gif"
+	eventsNormal.src = "images/buttons/eventsNormal.gif"
+	eventsOver.src = "images/buttons/eventsOver.gif"
+
+}
+else {
+	homeNormal = ""
+	homeOver = ""
+	aboutNormal = ""
+	aboutOver = ""
+	contactNormal = ""
+	contactOver = ""
+	orderNormal = ""
+	orderOver = ""
+	productsNormal = ""
+	productsOver = ""
+	eventsNormal = ""
+	eventsOver = ""
+	
+	document.home = ""
+	document.about = ""
+	document.contact = ""
+	document.order = ""
+	document.products = ""
+	document.events = ""
+	
+}
+
+
+
+// End hiding script from old browsers -->
+</script>	
+
+</head>
+<body onLoad="rotate()">
+<p>&nbsp;</p>
+<div id="container">
+<br /><br />
+<div id="navitabs" class="center">
+<a href='#' onMouseover="document.home.src=homeOver.src" onMouseout="document.home.src=homeNormal.src"><img src="images/buttons/homeNormal.gif" width="150" heigh="50" border="0" name="home" alt="home" /></a>
+<a href='#' onMouseover="document.about.src=aboutOver.src" onMouseout="document.about.src=aboutNormal.src"><img src="images/buttons/aboutNormal.gif" width="150" heigh="50" border="0" name="about" alt="about" /></a>
+<a href='#' onMouseover="document.products.src=productsOver.src" onMouseout="document.products.src=productsNormal.src"><img src="images/buttons/productsNormal.gif" width="150" heigh="50" border="0" name="products" alt="products" /></a>
+<a href='http://i5.nyu.edu/~am1383/assign5/order.html' onMouseover="document.order.src=orderOver.src" onMouseout="document.order.src=orderNormal.src"><img src="images/buttons/orderNormal.gif" width="150" heigh="50" border="0" name="order" alt="order" /></a>
+<a href='#' onMouseover="document.contact.src=contactOver.src" onMouseout="document.contact.src=contactNormal.src"><img src="images/buttons/contactNormal.gif" width="150" heigh="50" border="0" name="contact" alt="contact" /></a>
+<a href='http://i5.nyu.edu/~am1383/ankur_mathur_assignment3.html' onMouseover="document.events.src=eventsOver.src" onMouseout="document.events.src=eventsNormal.src"><img src="images/buttons/eventsNormal.gif" width="150" heigh="50" border="0" name="contact" alt="contact" /></a>
+</div>
+<div id="desc" class="center">
+
+<img src="images/banner/1.gif" height="200px" width="760px" name="banner" alt="Banner" />
+
+</div>
+
+<br />
+<br />
+<h1 class="center">Poster Sale!</h1>
+<br />
+<br />
+<p>High quality posters are on sale here. Take a look through the slide show for some samples</p>
+<div class="center">
+<img src="images/slide/1.jpg" height="300" width="400" name="slideShow" alt="slide show" />
+<br /><br />
+<h2> <a href="javascript:processPrevious()">Previous</a> - <a href="javascript:processNext()">Next</a> </h2>
+</div>
+<br />
+<br />
+<br />
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div id="footer">
+Copyright 2006, <a href="http://www.anksconsulting.com">Ankur Mathur</a><br />
+</div>
+</div>
+
+</body>
+</html>

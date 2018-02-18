@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+  
+  <SCRIPT language="JavaScript">
+<!--HIDE
+
+
+function rollIt() {
+    var d1 = Math.ceil(Math.random() * 6)
+    var d2 = Math.ceil(Math.random() * 6)
+    var tot = d1 + d2
+     with (document.forms[0]) {
+        die1.value = d1
+        die2.value = d2
+        total.value = tot
+       }
+     document.images[3].src="dice_" + d1 + ".gif"
+     document.images[4].src="dice_" + d2 + ".gif"
+
+ }
+
+
+//STOP HIDING--></SCRIPT>
+  <TITLE>Properties of Document</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffd303">
+
+<FORM>
+<H2 ALIGN=CENTER>Die 1 is now <INPUT TYPE="text" NAME="die1" SIZE="1"> 
+
+
+
+</H2>
+
+<H2 ALIGN=CENTER>Die 2 is now <INPUT TYPE="text" NAME="die2" SIZE="1">
+
+</H2>
+
+<H1 ALIGN=CENTER>So, your total is: <INPUT TYPE="text" NAME="total" SIZE=
+"2"> 
+
+<input type="button" value="roll the dice" onClick="rollIt()">
+
+</H1>
+</FORM>
+</BODY>
+
+</HTML>

@@ -1,0 +1,9 @@
+AuthUserFile /home1/a/am1383/public_html/private/.htpasswd
+
+AuthName Privatesite
+
+AuthType Basic
+
+<LIMIT GET>
+require valid-user
+</LIMIT>

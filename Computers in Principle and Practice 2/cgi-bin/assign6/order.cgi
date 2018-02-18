@@ -1,0 +1,189 @@
+#!/usr/bin/perl
+use strict;
+
+#there are no changes to this page, just serving it as a cgi script
+#When the user submits the order, I call process_order.cgi to handle the rest of assignment
+
+print "Content-type: text/html\n\n";
+
+print <<"HTML code";
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Order  Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/javascript">
+<!-- HIDE IT
+
+// Set up the expire date for cookies that will be set on this page
+expiredate= new Date;
+expiredate.setMonth(expiredate.getMonth() + 6);
+
+// Set the default style to 1
+var style_change = 1;
+
+//Test if a cookie exists, if it does, get the value of the  cookies using the getCookie function
+//Even if one cookie exists for this domain, the if statement is true and will be evaluated. 
+//  Need to take this into account later on, because if there is no value for the cookie, the
+//  getCookie function returns a null value. At this point, nothing should be null, but you never know
+if (document.cookie != "") {
+//alert("Cookie exists");
+   SG1_s1=getCookie("SG1_Season_1");
+   SG1_s2=getCookie("SG1_Season_2");
+   SG1_s3=getCookie("SG1_Season_3");
+   SG1_s4=getCookie("SG1_Season_4");
+   SG1_s5=getCookie("SG1_Season_5");
+   SG1_s6=getCookie("SG1_Season_6");
+   SG1_s7=getCookie("SG1_Season_7");
+   SG1_s8=getCookie("SG1_Season_8");
+   email=getCookie("email");
+   total_price=getCookie("Total_Order_Price");
+   fname=getCookie("FirstName");
+   lname=getCookie("lname");
+   address1=getCookie("address1");
+   city=getCookie("city");
+   state1=getCookie("state1");
+   zipCode=getCookie("zipCode");
+   phone=getCookie("phone");  
+   style_change=getCookie("Style_sheet");
+} /* end if cookie */
+//If we have a null value for the style sheet, set it to 1
+if(style_change==null){
+style_change=1;
+}
+// write out the link to correct style sheet
+document.write("<link href='http://i5.nyu.edu/~am1383/assign4/style"+style_change+".css' rel='stylesheet' type='text/css'>");
+
+function getCookie(name) {
+// this function reads the info saved in a cookie, based on the name passed to it
+  var dc = document.cookie;
+  var prefix = name + "=";
+  var begin = dc.indexOf("; " + prefix);
+  if (begin == -1) {
+    begin = dc.indexOf(prefix);
+    if (begin != 0) return null;
+  } else
+    begin += 2;
+  var end = document.cookie.indexOf(";", begin);
+  if (end == -1)
+    end = dc.length;
+  return unescape(dc.substring(begin + prefix.length, end));
+}
+
+//If nothing of that product has been order set it equal to 0
+if(SG1_s1==null){
+SG1_s1=0;
+}
+if(SG1_s2==null){
+SG1_s2=0;
+}
+if(SG1_s3==null){
+SG1_s3=0;
+}
+if(SG1_s4==null){
+SG1_s4=0;
+}
+if(SG1_s5==null){
+SG1_s5=0;
+}
+if(SG1_s6==null){
+SG1_s6=0;
+}
+if(SG1_s7==null){
+SG1_s7=0;
+}
+if(SG1_s8==null){
+SG1_s8=0;
+}
+
+
+//create two arrarys, one with quantity, one that keeps track of the associated pics pointers
+picID = new Array("1","2","3","4","5","6","7","8")
+quant = new Array(SG1_s1,SG1_s2,SG1_s3,SG1_s4,SG1_s5,SG1_s6,SG1_s7,SG1_s8)
+
+
+//sort in decending order
+for(var l =0;l<8;l++)
+	{
+	for(var r=l+1;r<8;r++)
+	{
+		if(quant[l]<quant[r])
+		{
+			var temp = quant[r];
+			quant[r]=quant[l];
+			quant[l]=temp;
+			temp1=picID[l];
+			picID[l]=picID[r];
+			picID[r]=temp1;
+		}
+	}
+}
+
+// END HIDING -->	
+</script>
+</head>
+
+<body>
+<div id="content">
+<div id="text">
+<h1>Your Order</h1>
+<br>
+<br>
+<br>
+
+<script language="JavaScript" type="text/javascript">
+<!-- HIDE IT
+// print out the shipping information of the user
+document.write("<h3>Shipping Information:</h3>");
+document.write("<p>"+fname+" "+lname+"<br>");
+document.write(address1+"<br>");
+document.write(city+", "+state1+" "+zipCode+"<br>");
+document.write(email + "\@nyu.edu<br>");
+document.write(phone + "</p>");
+document.write("<br>");
+document.write("<h3>Order Information</h3>");
+document.write("<ul>");
+// set up the table that will display the order
+document.write("<table width='100%'  border='0' cellspacing='4' cellpadding='4'>");
+document.write("  <tr>");
+document.write("    <th scope='col'>Description</th>");
+document.write("    <th scope='col'>Quantity Ordered</th>");
+document.write("  </tr>");
+for(var i=0;i<8;i++) // start a for loop to go through the array we sorted before
+{
+	temp=picID[i]; // this has the pointer to the correct images, basically in my set up it is also the season number
+	if(quant[i] !=0){
+	// if the quantity is not zero we will see how much we ordered of it
+	document.write("<tr>");
+	document.write("<td>");
+	document.write("<p>Stargate Season " + temp +"</p>");
+	document.write("</td>");
+	document.write("<td align='center'>");
+	document.write(quant[i])
+	document.write("</td>");
+	document.write("</tr>");
+	}// end of if statement
+}// end of the for loop, we have now gone through all 8 products we sell
+// so we can print out the total for the order
+document.write("<tr>");
+document.write("<td>Total:</td>");
+document.write("<td align='center'>");
+document.write("\$"+total_price);
+document.write("</td>");
+document.write("</tr>");
+// and close off the table
+document.write("</table>");
+
+// END HIDING -->	
+</script>
+<form action="process_order.cgi" method="post">
+<input type="submit" value="submit">
+</form>
+
+</div>
+</div>
+</body>
+</html>
+
+HTML code
